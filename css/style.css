@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+@keyframes BtnHoverEffect {
+    0% {
+        transform: scale(0);
+    }
+    40% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box;}
+li { list-style: none; }
+input, select { outline: none; border: none; font-family: inherit; }
+
+:root {
+    --font-size-medium: 1.5rem;
+    --font-size-larger: 3.5rem;
+
+    --header-width: 8rem;
+
+    --black-bg: #181818;
+    --white: #fff;
+    --point-green: #00c389;
+    --gray-btn: #eaeaea;
+    --gray-bg: rgb(230, 230, 230);
+}
+
+#wrap {
+    font-size: 14px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    height: 8%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+::-webkit-scrollbar-track{ 
+    background-color: transparent; 
+}
+
+
+.inner {
+    width: calc(100vw - var(--header-width) - 8px);
+    float: right;
+}
+.inner-container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hover-green {
+    position: relative;
+    cursor: pointer;
+}
+.hover-green::after {
+    display: block;
+    content: "";
+    height: 1px;
+    background-color: var(--point-green);
+    transition: 0.5s;
+    transform: scaleX(0);
+}
+.hover-green:hover:after {
+    transform: scaleX(100%);
+}
+
+.circle-btn {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: relative;
+}
+.circle-btn i {
+    font-size: var(--font-size-medium);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.circle-btn::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 80px;
+    height: 80px;
+    background-color: var(--black-bg);
+    border-radius: 50%;
+    transform: scale(0);
+}
+.circle-btn:hover {
+    color: var(--white);
+}
+.circle-btn:hover::before {
+    animation: BtnHoverEffect 0.5s forwards;
+}
+
+.gray-bg {
+    background-color: var(--gray-btn);
+}
+.green-bg {
+    background-color: var(--point-green);
+    color: var(--white);
+}
+
+
+.title {
+    font-size: var(--font-size-larger);
+}
+
+.line {
+    display: inline-block;
+    width: 4rem;
+    height: 1px;
+    background-color: var(--black-bg);
+    margin-right: 8px;
+}
+
+.green-color {
+    color: var(--point-green);
+}

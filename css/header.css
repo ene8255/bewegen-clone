@@ -1,0 +1,139 @@
+header {
+    width: var(--header-width);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+#h-top {
+    background-color: var(--black-bg);
+    color: var(--white);
+    height: 50vh;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 24px;
+}
+#h-top > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#topLogo {
+    font-size: 0;
+    width: 50px;
+    height: 50px;
+    background: url(../images/logo_s.png) no-repeat center center;
+    background-size: cover;
+    margin-bottom: 32px;
+}
+#toggle {
+    width: 32px;
+    height: 28px;
+    margin: 0 auto;
+}
+#toggle span {
+    display: block;
+    width: 32px;
+    height: 2px;
+    background-color: var(--white);
+    margin: 0 auto;
+    transition: 0.2s;
+}
+#toggle span:nth-child(2) {
+    width: 24px;
+}
+#toggle span:not(:last-child) {
+    margin-bottom: 8px;
+}
+#toggle:hover span:not(:nth-child(2)) {
+    width: 24px;
+}
+#toggle:hover span:nth-child(2) {
+    width: 32px;
+}
+#bottomLogo {
+    transform: rotate(-90deg);
+    font-size: 24px;
+    position: relative;
+    margin-bottom: 24px;
+}
+#bottomLogo::after {
+    content: "®";
+    font-size: 16px;
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: -16px;
+}
+
+#h-bottom {
+    /* height: 50vh; */
+    background-color: rgba(255, 255, 255, 0.9);
+    position: relative;
+    top: 0;
+    left: -200px;
+    /* left: 0; */
+}
+#h-bottom ul {
+    transform: rotate(-90deg);
+    width: 200px;
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#h-bottom ul li {
+    transform: rotate(-90deg);
+}
+
+#h-center {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#h-center ul {
+    display: flex;
+    padding: 40px 0;
+}
+#h-center ul li:first-child {
+    margin-right: 50%;
+}
+
+#menu-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100vh;
+    padding: 16px;
+}
+#menu-right ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+}
+#menu-right ul li:not(:nth-child(2)) {
+    height: 28%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+#menu-right .rotate90 {
+    width: 150px;
+}
+.rotate90 {
+    display: inline-block;
+    transform: rotate(90deg);
+}
+
+/* 나중에 하기!! */
+nav {
+    display: none;
+}

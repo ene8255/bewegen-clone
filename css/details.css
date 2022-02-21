@@ -1,0 +1,18 @@
+#mainTitle {
+    padding-top: 160px;
+    height: 50vh;
+    min-height: 420px;
+}
+#titleDesc {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size-medium);
+    margin-top: 32px;
+}
+
+#mainDetail{
+    background-color: var(--gray-bg);
+}
+#mainDetail img {
+    width: 100%;
+}
