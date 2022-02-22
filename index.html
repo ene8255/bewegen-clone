@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/details.css">
+    <script src="js/header.js" defer></script>
+    <script src="js/details.js" defer></script>
     <title>The Bewegen Bike Share System</title>
 </head>
 <body>
@@ -42,13 +44,13 @@
         <div id="menu-right">
             <ul>
                 <li>
-                    <span class="circle-btn gray-bg">
+                    <span class="circle-btn gray-btn">
                         <i class="fa-regular fa-calendar-check"></i>
                     </span>
-                    <span class="rotate90">Reach us</span>
+                    <span class="rotate90" id="reachUs">Reach us</span>
                 </li>
                 <li>
-                    <select>
+                    <select id="language">
                         <option>EN</option>
                         <option>FR</option>
                         <option>ES</option>
@@ -57,8 +59,8 @@
                     </select>
                 </li>
                 <li>
-                    <span class="rotate90">Build Your Bike Share</span>
-                    <span class="circle-btn green-bg">
+                    <span class="rotate90" id="buildYour">Build Your Bike Share</span>
+                    <span class="circle-btn green-btn">
                         <i class="fa-solid fa-bicycle"></i>
                     </span>
                 </li>
@@ -137,84 +139,108 @@
                 </div>
             </section>
             <section id="mainDetail" class="inner">
-                <div>
+                <div class="gray-bg"></div>
+                <div id="mainImgDiv">
                     <img src="images/bewegen_velo-zoom-2.png" alt="bewegen bike">
                 </div>
-                <div>
-                    <ul>
-                        <li>
-                            <p>
-                                <span>01 / 08</span>
-                                <span></span>
-                                <span>Dyname® Electric Motor</span>
-                            <p>
-                                Sealed mid-drive electric motor to help conquer hills and long distances without breaking a sweat.
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span>02 / 08</span>
-                                <span></span>
-                                <span>48V High-Efficiency Lithium Ion Battery</span>
-                            <p>
-                                Travel up to 60 miles (100 km) on a single charge.
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span>03 / 08</span>
-                                <span></span>
-                                <span>Dockless Bicycle Technology & Secondary Lock</span>
-                            <p>
-                                Freedom to start and finish trips anywhere.
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span>04 / 08</span>
-                                <span></span>
-                                <span>Color Digital Screen</span>
-                            <p>
-                                Monitor your speed, distance, trip status, and more.
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span>05 / 08</span>
-                                <span></span>
-                                <span>GPS Location & Routing</span>
-                            <p>
-                                Precise tracking of user trips.
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span>06 / 08</span>
-                                <span></span>
-                                <span>Heavy-Duty Basket</span>
-                            <p>
-                                Carry up to 55 lbs of cargo on the go.
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span>07 / 08</span>
-                                <span></span>
-                                <span>Bottom Bracket Motor</span>
-                            <p>
-                                The bottom bracket motor offers extended motor lifespan and optimal riding comfort.
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span>08 / 08</span>
-                                <span></span>
-                                <span>Electronic Bell</span>
-                            <p>
-                                Programmable to play customized audio.
-                            </p>
-                        </li>
-                    </ul>
+                <div class="text-carousel">
+                    <div>
+                        <ul class="carousel-nav">
+                            <li class="circle-btn">
+                                <i class="fa-solid fa-angle-left"></i>
+                            </li>
+                            <li class="circle-btn">
+                                <i class="fa-solid fa-angle-right"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="text-box-container">
+                        <ul class="text-box">
+                            <li>
+                                <p class="text-title">
+                                    <span>01 / 08</span>
+                                    <span class="line"></span>
+                                    <span>Dyname® Electric Motor</span>
+                                </p>
+                                <p class="text-desc">
+                                    Sealed mid-drive electric motor to help conquer hills and long distances without breaking a sweat.
+                                </p>
+                            </li>
+                            <!-- <li>
+                                <p class="text-title">
+                                    <span>02 / 08</span>
+                                    <span class="line"></span>
+                                    <span>48V High-Efficiency Lithium Ion Battery</span>
+                                </p>
+                                <p class="text-desc">
+                                    Travel up to 60 miles (100 km) on a single charge.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="text-title">
+                                    <span>03 / 08</span>
+                                    <span class="line"></span>
+                                    <span>Dockless Bicycle Technology & Secondary Lock</span>
+                                </p>
+                                <p class="text-desc">
+                                    Freedom to start and finish trips anywhere.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="text-title">
+                                    <span>04 / 08</span>
+                                    <span class="line"></span>
+                                    <span>Color Digital Screen</span>
+                                </p>
+                                <p class="text-desc">
+                                    Monitor your speed, distance, trip status, and more.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="text-title">
+                                    <span>05 / 08</span>
+                                    <span class="line"></span>
+                                    <span>GPS Location & Routing</span>
+                                </p>
+                                <p class="text-desc">
+                                    Precise tracking of user trips.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="text-title">
+                                    <span>06 / 08</span>
+                                    <span class="line"></span>
+                                    <span>Heavy-Duty Basket</span>
+                                </p>
+                                <p class="text-desc">
+                                    Carry up to 55 lbs of cargo on the go.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="text-title">
+                                    <span>07 / 08</span>
+                                    <span class="line"></span>
+                                    <span>Bottom Bracket Motor</span>
+                                </p>
+                                <p class="text-desc">
+                                    The bottom bracket motor offers extended motor lifespan and optimal riding comfort.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="text-title">
+                                    <span>08 / 08</span>
+                                    <span class="line"></span>
+                                    <span>Electronic Bell</span>
+                                </p>
+                                <p class="text-desc">
+                                    Programmable to play customized audio.
+                                </p>
+                            </li> -->
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="skip-btn btn-hover">Skip</span>
+                    </div>
                 </div>
             </section>
             <!-- details // -->

@@ -14,7 +14,7 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box;}
 li { list-style: none; }
-input, select { outline: none; border: none; font-family: inherit; }
+input, select { outline: none; border: none; font-family: inherit; background-color: transparent; }
 
 :root {
     --font-size-medium: 1.5rem;
@@ -26,7 +26,9 @@ input, select { outline: none; border: none; font-family: inherit; }
     --white: #fff;
     --point-green: #00c389;
     --gray-btn: #eaeaea;
-    --gray-bg: rgb(230, 230, 230);
+    --detail-bg: rgb(230, 230, 230);
+    --gray-bg: #f5f5f5;
+    --gray-btn: #4f4f4f;
 }
 
 #wrap {
@@ -105,10 +107,10 @@ input, select { outline: none; border: none; font-family: inherit; }
     animation: BtnHoverEffect 0.5s forwards;
 }
 
-.gray-bg {
+.gray-btn {
     background-color: var(--gray-btn);
 }
-.green-bg {
+.green-btn {
     background-color: var(--point-green);
     color: var(--white);
 }
@@ -128,4 +130,40 @@ input, select { outline: none; border: none; font-family: inherit; }
 
 .green-color {
     color: var(--point-green);
+}
+
+
+.btn-hover {
+    overflow: hidden;
+    cursor: pointer;
+}
+.btn-hover::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 50%;
+    background-color: var(--gray-btn);
+    z-index: -1;
+    transition: 0.3s;
+}
+.btn-hover::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 49%;
+    right: -100%;
+    width: 100%;
+    height: 50%;
+    background-color: var(--gray-btn);
+    z-index: -1;
+    transition: 0.3s;
+}
+.btn-hover:hover::before {
+    left: 0;
+}
+.btn-hover:hover::after {
+    right: 0;
 }
