@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/details.css">
+    <link rel="stylesheet" href="css/trike.css">
     <script src="js/header.js" defer></script>
     <script src="js/details.js" defer></script>
     <title>The Bewegen Bike Share System</title>
@@ -244,117 +245,136 @@
                 </div>
             </section>
             <!-- details // -->
-            <section class="inner">
-                <div>
-                    <div>
+            <!-- trike -->
+            <section id="trike" class="inner">
+                <div id="trike-title">
+                    <div id="titleDiv">
                         <p>
                             <span>Simplifying</span>
-                            <span></span>
+                            <span class="line"></span>
                             <span>Urban Logistics</span>
                         </p>
-                        <h2>
+                        <h2 class="title">
                             Introducing <br/>
                             the<br/>
                             Bewegen<br/>
-                            <span>Trike</span>!
+                            <span class="green-color">Trike</span>!
                         </h2>
                     </div>
                     <div>
                         <img src="images/trike_bike.png" alt="bewegen trike">
                     </div>
                 </div>
-                <ul>
+                <ul id="trike-desc">
                     <li>
-                        <p>01</p>
+                        <p class="descNum">01</p>
                         <div>
-                            <h3>Multiple cargo loading options</h3>
+                            <h3 class="descH3">Multiple cargo loading options</h3>
                             <p>Flexible usage in an urban setting</p>
                         </div>
                     </li>
                     <li>
-                        <p>02</p>
+                        <p class="descNum">02</p>
                         <div>
-                            <h3>Ride further & transport more</h3>
+                            <h3 class="descH3">Ride further & transport more</h3>
                             <p>Move 200 lbs for up to 100 kms</p>
                         </div>
                     </li>
                     <li>
-                        <p>03</p>
+                        <p class="descNum">03</p>
                         <div>
-                            <h3>New innovative 3-wheel design</h3>
+                            <h3 class="descH3">New innovative 3-wheel design</h3>
                             <p>For increased safety & control</p>
                         </div>
                     </li>
                     <li>
-                        <p>04</p>
+                        <p class="descNum">04</p>
                         <div>
-                            <h3>Compatible with Bewegen e-bike docking technology</h3>
+                            <h3 class="descH3">Compatible with Bewegen e-bike docking technology</h3>
                             <p>Enables mixed fleet of Trikes & Pedelec bikes</p>
                         </div>
                     </li>
                 </ul>
             </section>
-            <section class="inner">
-                <div>
-                    <div>
-                        <h2>Accelerating Bike Share</h2>
-                        <p>
+            <section id="bikeShare" class="inner">
+                <div id="bs-desc" class="inner-container">
+                    <div id="bsLeft">
+                        <h2 class="title">Accelerating Bike Share</h2>
+                        <p class="bs-desc-p">
                             Bewegen Technologies was founded upon a vision to revolutionize how we move. This is why we created the most advanced bike share system available, featuring world-class Pedelec (electric-assist) bicycle technology. Our team continues to accelerate towards innovation, maintaining an intensive focus on research and development. Bewegen is here to deliver the future of active mobility.
                         </p>
                     </div>
-                    <div>
+                    <div id="bsRight">
                         <div>
-                            <strong>Discover Our Bike Share Network</strong>
-                            <span><i class="fa-solid fa-angle-right"></i></span>
+                            <strong>Discover Our<br/> Bike Share Network</strong>
+                            <span class="circle-btn">
+                                <i class="fa-solid fa-angle-right"></i>
+                            </span>
                         </div>
-                        <p>
+                        <p class="bs-desc-p">
                             Riding a bike should be fun, and Bewegen’s user-friendly Pedelec bicycle is a true smile maker. Get on the bike, begin pedalling, and feel the electric-assist motor activate seamlessly alongside your movement. Bewegen’s Pedelec bicycle is more than just a bike, it’s an experience.
                         </p>
                     </div>
                 </div>
-                <div>
-                    <div>
+                <div id="t-carousel-two-container">
+                    <div id="num-carousel">
                         <span>0</span>
-                        <ul>
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
-                        </ul>
+                        <div id="num-div">
+                            <ul id="num-ul">
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                            </ul>
+                        </div>
                     </div>
-                    <ul>
-                        <li>
-                            <p>
-                                <span>01</span>
-                                <span></span>
-                                <span>Bewegen: Revolutionizing Movement</span>
-                            </p>
-                            <p>
-                                Bewegen (Dutch, Verb, bəˈʋeːɣən): To Move, To Exercise, To Shift.
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span>02</span>
-                                <span></span>
-                                <span>Bike Sharing On Demand</span>
-                            </p>
-                            <p>
-                                Access Your Bike Anywhere Using Mobile App or Membership Card
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <span>03</span>
-                                <span></span>
-                                <span>Freedom in Bike Sharing</span>
-                            </p>
-                            <p>
-                                Dockless Technology & Secondary Lock. End Your Ride Anytime, Anywhere
-                            </p>
-                        </li>
-                    </ul>
+                    <div class="text-carousel">
+                        <div>
+                            <ul class="carousel-nav">
+                                <li class="circle-btn left">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </li>
+                                <li class="circle-btn right">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="text-box-container">
+                            <ul id="t-carousel-two" class="text-box">
+                                <li>
+                                    <p class="text-title">
+                                        <span>01</span>
+                                        <span class="line"></span>
+                                        <span>Bewegen: Revolutionizing Movement</span>
+                                    </p>
+                                    <p class="text-desc">
+                                        Bewegen (Dutch, Verb, bəˈʋeːɣən): To Move, To Exercise, To Shift.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="text-title"> 
+                                        <span>02</span>
+                                        <span class="line"></span>
+                                        <span>Bike Sharing On Demand</span>
+                                    </p>
+                                    <p class="text-desc">
+                                        Access Your Bike Anywhere Using Mobile App or Membership Card
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="text-title">
+                                        <span>03</span>
+                                        <span class="line"></span>
+                                        <span>Freedom in Bike Sharing</span>
+                                    </p>
+                                    <p class="text-desc">
+                                        Dockless Technology & Secondary Lock. End Your Ride Anytime, Anywhere
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div>
+                <div id="bikeImg-carousel">
                     <div>
                         <img src="images/bike-lateral-black.png" alt="bewegen black">
                     </div>
@@ -375,28 +395,28 @@
                     </div>
                 </div>
             </section>
-            <section>
-                <div class="inner">
-                    <h2>Bike Share Your Way!</h2>
-                    <div>
-                        <strong>Build your bike share</strong>
-                        <span><i class="fa-solid fa-bicycle"></i></span>
+            <section id="yourWay" class="inner">
+                <div id="yw-title" class="inner-container">
+                    <h2 class="ywleft">Bike Share Your Way!</h2>
+                    <div class="ywright">
+                        <strong>Build your<br/> bike share</strong>
+                        <span class="circle-btn">
+                            <i class="fa-solid fa-bicycle"></i>
+                        </span>
                     </div>
                 </div>
-                <div class="inner">
-                    <p>
+                <div id="yw-desc" class="inner-container">
+                    <p class="ywleft">
                         Bewegen offers advanced bike share technology to design the system that’s right for you.
                     </p>
-                    <div>
-                        <ul>
-                            <li>Dockless</li>
-                            <li>Dock-Based</li>
-                            <li>Hybrid</li>
-                        </ul>
-                    </div>
+                    <ul class="ywright">
+                        <li class="on">Dockless</li>
+                        <li>Dock-Based</li>
+                        <li>Hybrid</li>
+                    </ul>
                 </div>
-                <div class="inner">
-                    <ul>
+                <div id="yw-lists">
+                    <ul class="on">
                         <li>Pick-up & return your bicycle anywhere</li>
                         <li>Instant access with mobile application</li>
                         <li>GPS-based geofencing technology</li>
@@ -415,7 +435,7 @@
                         <li>Less infrastructure reduces curbside use</li>
                     </ul>
                 </div>
-                <div>
+                <div id="yw-imgs">
                     <div>
                         <img src="images/dockless-app-left.png" alt="bewegen app">
                         <img src="images/dockless-app-right.png" alt="bewegen app">
@@ -428,6 +448,7 @@
                     </div>
                 </div>
             </section>
+            <!-- trike // -->
             <section class="inner">
                 <div>
                     <p>

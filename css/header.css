@@ -86,7 +86,7 @@ header {
     /* width: 40px; */
     position: absolute;
     /* bottom: 5%; */
-    bottom: 9rem;
+    bottom: 5rem;
     left: 50%;
     transform: translateX(-50%);
     /* display: flex; */

@@ -1,0 +1,198 @@
+#trike {
+    background-color: var(--gray-bg);
+    position: relative;
+}
+#trike-title {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10vh;
+    padding: 5rem;
+}
+#titleDiv {
+    margin-right: 10vw;
+}
+#titleDiv > p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+#trike-desc {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--white);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 80%;
+    z-index: 2;
+}
+#trike-desc li {
+    width: 25%;
+    padding: 2rem;
+}
+#trike-desc li:not(:last-child) {
+    border-right: 1px solid var(--gray-bg-dark);
+}
+.descNum {
+    margin-bottom: 2rem;
+}
+.descH3 {
+    margin-bottom: 1rem;
+}
+
+
+#bikeShare {
+    background-color: var(--gray-bg-dark);
+    height: 200vh;
+    padding-top: 30vh;
+    position: relative;
+}
+#bs-desc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#bs-desc > div {
+    width: 45%;
+}
+.bs-desc-p {
+    margin-top: 10vh;
+    font-size: var(--font-size-small);
+    line-height: 1.5rem;
+}
+.bs-desc-p::before {
+    content: "";
+    display: block;
+    width: 2rem;
+    height: 1px;
+    background-color: var(--black-bg);
+    margin-bottom: 7vh;
+}
+#bsRight > div {
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size-small);
+}
+#bsRight .circle-btn {
+    background-color: var(--white);
+    margin-left: 5vw;
+}
+
+#t-carousel-two-container {
+    margin-top: 5vh;
+}
+
+#num-carousel {
+    position: absolute;
+    left: 0;
+    top: 105vh;
+    display: flex;
+    font-size: 20rem;
+    color: var(--white);
+}
+#num-div {
+    width: 10vw;
+    height: 20rem;
+    overflow: hidden;
+}
+#num-ul {
+    position: relative;
+}
+#num-ul > li {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#t-carousel-two-container .text-carousel {
+    float: right;
+    margin-right: 10vw;
+    height: 30vh;
+    min-height: 400px;
+}
+
+#bikeImg-carousel {
+    display: flex;
+    position: absolute;
+    bottom: 5vh;
+}
+
+
+#yourWay {
+    height: 120vh;
+    background-color: var(--point-green);
+    color: var(--white);
+    padding-top: 20vh;
+    position: relative;
+}
+
+#yw-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#yw-title .ywleft {
+    font-size: 3.5rem;
+}
+#yw-title .ywright {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size-small);
+    line-height: 1.5rem;
+}
+#yw-title .circle-btn {
+    margin-left: 4rem;
+    background-color: var(--white);
+    color: var(--point-green);
+}
+#yw-title .circle-btn:hover {
+    color: var(--white);
+}
+
+.ywleft {
+    width: 50%;
+}
+.ywright {
+    width: 45%;
+}
+
+#yw-desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10vh;
+    font-size: var(--font-size-small);
+}
+#yw-desc .ywright {
+    display: flex;
+}
+#yw-desc .ywright li {
+    padding: 1rem 2rem;
+    background-color: #0a7;
+    border-radius: 2rem;
+}
+#yw-desc .ywright li:not(:last-child) {
+    margin-right: 1rem;
+}
+#yw-desc .ywright li.on {
+    background-color: var(--white);
+    color: var(--point-green);
+}
+
+#yw-lists > ul {
+    opacity: 0;
+    position: absolute;
+}
+#yw-lists > ul.on {
+    opacity: 1;
+}
+
+#yw-imgs {
+    position: absolute;
+    top: 100%;
+}

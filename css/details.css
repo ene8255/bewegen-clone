@@ -1,18 +1,12 @@
 @keyframes zoomIn {
     0% {
         transform: scale(1);
-        left: -7%;
-        top: -20vh;
     }
     50% {
         transform: scale(2);
-        left: -7.25%;
-        top: -30vh;
     }
     100% {
         transform: scale(3.5);
-        left: -7.5%;
-        top: -68vh;
     }
 }
 
@@ -26,6 +20,17 @@
         width: 60vw;
         overflow: hidden;
         height: 100vh;
+    }
+}
+
+@keyframes tCarouselShow {
+    0% {
+        opacity: 0;
+        transform: translateY(-40%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-50%);
     }
 }
 
@@ -50,6 +55,7 @@
     position: sticky;
     top: 0;
     left: 0;
+    overflow: hidden;
 }
 .gray-bg {
     position: absolute;
@@ -63,6 +69,9 @@
 #mainDetail.fixed .gray-bg {
     right: 0;
     transition: right 1s 1s;
+}
+#mainDetail.fixed .text-carousel {
+    animation: tCarouselShow 1s 2s forwards;
 }
 #mainImgDiv {
     position: relative;
@@ -80,18 +89,25 @@
 }
 #mainImgDiv.zoom img {
     animation: zoomIn 2s forwards;
+    left: -7.5%;
+    top: -50vh;
 }
 
-.text-carousel {
+
+#mainDetail .text-carousel {
     position: absolute;
     top: 50%;
     right: 8%;
     transform: translateY(-50%);
     z-index: 3;
+    opacity: 0;
+}
+.text-carousel {
     width: 30vw;
     height: 50vh;
     min-width: 550px;
     min-height: 450px;
+    transition: 0.5s;
 }
 .carousel-nav {
     display: flex;
