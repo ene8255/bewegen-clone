@@ -1,0 +1,134 @@
+#experts {
+    height: 450vh;
+    background-color: var(--gray-bg-dark);
+    padding-top: 10rem;
+}
+
+#team {
+    height: 80vh;
+    position: relative;
+}
+#team-desc {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 45%;
+    height: 100%;
+    z-index: 2;
+}
+#quote {
+    color: var(--point-green);
+    font-size: var(--font-size-larger);
+    position: absolute;
+    left: 0;
+    top: 35%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+#team-desc-box {
+    background-color: var(--white);
+    height: 75%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 3.5rem;
+    font-size: var(--font-size-medium);
+    line-height: 2.5rem;
+}
+#team-desc-box p:nth-child(2) {
+    font-size: 14px;
+    padding-top: 0.8rem;
+}
+#teamImg {
+    width: 65%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#teamImg img {
+    width: 100%;
+}
+
+#w-carousel {
+    position: relative;
+    height: 20rem;
+    overflow: hidden;
+}
+#w-carousel-container {
+    display: flex; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 540vw;
+    height: 100%;
+    animation: toLeft 40s linear infinite;
+}
+.word-carousel {
+    display: flex;
+}
+.word-carousel > span {
+    font-size: 18rem;
+    color: var(--white);
+    font-weight: bold;
+    width: 90vw;
+    text-align: center;
+}
+
+
+#partners {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 200vh;
+    padding-top: 5rem;
+}
+#partners li {
+    width: 22%;
+    line-height: 1.3rem;
+}
+#partners img {
+    width: 90%;
+}
+.p-gray {
+    color: gray;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+#michel {
+    display: flex;
+    height: 50vh;
+    margin-top: 10vh;
+}
+#michel > div {
+    width: 50%;
+    position: relative;
+}
+#michel img {
+    width: 100%;
+}
+#michel-img {
+    width: 60%;
+    max-width: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#michel-auto {
+    position: absolute;
+    bottom: 15%;
+    right: -50%;
+}
+#michel-auto img {
+    width: 40%;
+}
+#michel-desc {
+    line-height: 1.5rem;
+}
+#michel-desc > p:first-child {
+    font-size: var(--font-size-medium);
+}
+#michel-desc > p:nth-child(2) {
+    color: gray;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}

@@ -3,20 +3,18 @@
     position: relative;
 }
 #trike-title {
-    height: 100vh;
+    height: 150vh;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     margin-top: 10vh;
     padding: 5rem;
 }
+#trike-title img {
+    width: 100%;
+}
 #titleDiv {
     margin-right: 10vw;
-}
-#titleDiv > p {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5rem;
 }
 
 #trike-desc {
@@ -47,7 +45,7 @@
 
 #bikeShare {
     background-color: var(--gray-bg-dark);
-    height: 200vh;
+    height: 250vh;
     padding-top: 30vh;
     position: relative;
 }
@@ -90,44 +88,73 @@
 #num-carousel {
     position: absolute;
     left: 0;
-    top: 105vh;
+    top: 120vh;
     display: flex;
     font-size: 20rem;
     color: var(--white);
+    font-weight: bold;
 }
 #num-div {
-    width: 10vw;
+    width: 15rem;
     height: 20rem;
     overflow: hidden;
-}
-#num-ul {
     position: relative;
 }
+#num-ul {
+    width: 15rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 #num-ul > li {
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
 }
 
-#t-carousel-two-container .text-carousel {
+#t-c-two-container .text-carousel {
     float: right;
     margin-right: 10vw;
     height: 30vh;
     min-height: 400px;
 }
 
-#bikeImg-carousel {
+#b-carousel {
+    position: absolute;
+    left: 0;
+    bottom: 5vh;
+    height: 32rem;
+    overflow: hidden;
+}
+#b-carousel-container {
     display: flex;
     position: absolute;
-    bottom: 5vh;
+    top: 0;
+    right: 0;
+    width: 800vw;
+    height: 100%;
+    animation: toRight 40s linear infinite;
+}
+.bikeImg-carousel {
+    display: flex;
+}
+.bikeImg-carousel > div {
+    width: 80vw;
+    height: 32rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bikeImg-carousel img {
+    height: 100%;
 }
 
-
 #yourWay {
-    height: 120vh;
+    height: 150vh;
     background-color: var(--point-green);
     color: var(--white);
-    padding-top: 20vh;
+    padding-top: 10rem;
     position: relative;
 }
 
@@ -168,31 +195,100 @@
     margin-top: 10vh;
     font-size: var(--font-size-small);
 }
-#yw-desc .ywright {
+#yw-btns {
     display: flex;
 }
-#yw-desc .ywright li {
-    padding: 1rem 2rem;
+#yw-btns li {
+    padding: 1rem 1.5rem;
     background-color: #0a7;
     border-radius: 2rem;
 }
-#yw-desc .ywright li:not(:last-child) {
+#yw-btns li:not(:last-child) {
     margin-right: 1rem;
 }
-#yw-desc .ywright li.on {
+#yw-btns li.on {
     background-color: var(--white);
     color: var(--point-green);
+    pointer-events: none;
 }
+#yw-btns .btn-hover:hover {
+    color: var(--point-green);
+}
+#yw-btns .btn-hover::before {
+    background-color: var(--white);
+}
+#yw-btns .btn-hover::after {
+    background-color: var(--white);
+}
+
 
 #yw-lists > ul {
     opacity: 0;
     position: absolute;
+    top: 70vh;
+    left: 50vw;
+    font-size: var(--font-size-small);
+    transition: opacity 0.5s, transform 1s;
+    transform: translateX(50%);
+}
+#yw-lists > ul li {
+    list-style: disc;
+    margin-bottom: 0.5rem;
 }
 #yw-lists > ul.on {
     opacity: 1;
+    transform: translateX(0);
 }
 
-#yw-imgs {
+
+#yw-imgs > div {
+    /* position: relative; */
+    /* position: absolute;
+    bottom: 0; */
+    opacity: 0;
+    transition: 0.5s;
+}
+#yw-imgs img {
+    transition: 0.5s;
+}
+#yw-imgs > div.on {
+    opacity: 1;
+}
+#yw-imgs > div.on #phone1 {
+    left: -4rem;
+}
+#yw-imgs > div.on #phone2 {
+    left: 14rem;
+}
+#yw-imgs > div.on #map {
+    bottom: -1rem;
+}
+#yw-imgs > div.on #dock {
+    bottom: -1.5rem;
+}
+
+
+#phone1 {
+    width: 28%;
     position: absolute;
-    top: 100%;
+    bottom: -2rem;
+    left: 10rem;
+}
+#phone2 {
+    width: 28%;
+    position: absolute;
+    bottom: -1rem;
+    left: 20rem;
+}
+#dock {
+    width: 105%;
+    position: absolute;
+    bottom: -5rem;
+    right: 0;
+}
+#map {
+    width: 35%;
+    position: absolute;
+    bottom: -5rem;
+    left: 8vw;
 }

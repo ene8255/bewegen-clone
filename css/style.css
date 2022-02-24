@@ -24,6 +24,24 @@
     }
 }
 
+@keyframes toRight {
+    0% {
+        right: 0;
+    }
+    100% {
+        right: -445%;
+    }
+}
+
+@keyframes toLeft {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -300%;
+    }
+}
+
 * { margin: 0; padding: 0; box-sizing: border-box;}
 li { list-style: none; }
 input, select { outline: none; border: none; font-family: inherit; background-color: transparent; }
@@ -164,6 +182,8 @@ input, select { outline: none; border: none; font-family: inherit; background-co
 .btn-hover {
     overflow: hidden;
     cursor: pointer;
+    position: relative;
+    z-index: 2;
 }
 .btn-hover::before {
     content: "";
@@ -194,4 +214,10 @@ input, select { outline: none; border: none; font-family: inherit; background-co
 }
 .btn-hover:hover::after {
     right: 0;
+}
+
+.sectionTitle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5rem;
 }

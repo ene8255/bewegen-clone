@@ -47,12 +47,10 @@ tOneLis.forEach((li, idx) => {
 function moveSlideF() {
     currentOne++;
     tOne.style.left = -(currentOne * 100) + '%';
-    console.log(currentOne);
 }
 function moveSlideB() {
     currentOne--;
     tOne.style.left = -(currentOne * 100) + '%';
-    console.log(currentOne);
 }
 
 function moveImg() {
