@@ -123,6 +123,7 @@ header {
     height: 100vh;
     padding: 16px;
     z-index: 90;
+    transition: 0.5s;
 }
 #menu-right ul {
     height: 100%;
@@ -164,9 +165,168 @@ header {
 }
 
 
-
-
-/* 나중에 하기!! */
 nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99;
+    background-color: var(--black-bg);
+    color: var(--white);
+    display: flex;
     display: none;
+}
+nav::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background-color: var(--black-bg);
+    width: 100%;
+    height: 50%;
+}
+nav::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: -100%;
+    background-color: var(--black-bg);
+    width: 100%;
+    height: 50%;
+}
+
+#nav-left {
+    width: 15%;
+    height: 100%;
+    padding: 2%;
+    position: relative;
+}
+#nav-left > h1 {
+    font-size: 0;
+    background: url(../images/logo_e.png) no-repeat center center;
+    background-size: contain;
+    width: 80%;
+    height: 10%;
+}
+#nav-close {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    font-size: var(--font-size-medium);
+}
+
+#nav-middle {
+    width: 60%;
+    height: 100%;
+    padding: 3%;
+}
+#nav-middle .line {
+    margin: 0;
+    width: 2rem;
+}
+#nav-middle .line::after {
+    background-color: var(--white);
+}
+#nav-social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10%;
+}
+#nav-social > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--font-size-small);
+    width: 15%;
+}
+#nav-social > ul li {
+    transition: 0.5s;
+    cursor: pointer;
+}
+#nav-social > ul li:hover {
+    color: var(--point-green);
+}
+
+#nav-menu-ul {
+    font-size: 4.5rem;
+    line-height: 6rem;
+    margin-bottom: 15%;
+}
+
+#nav-language {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20%;
+}
+#nav-language > ul {
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+}
+#nav-language > ul li {
+    transition: 0.5s;
+    cursor: pointer;
+}
+#nav-language > ul li.on {
+    color: var(--point-green);
+    pointer-events: none;
+}
+#nav-language > ul li:hover {
+    color: var(--point-green);
+}
+
+#nav-language .circle-btn {
+    color: var(--black-bg);
+    background-color: var(--white);
+}
+#nav-language .circle-btn::before {
+    background-color: var(--white);
+}
+
+#nav-right {
+    width: 25%;
+    height: 100%;
+}
+#nav-right > ul {
+    height: 100%;
+}
+#nav-right > ul li {
+    padding: 10%;
+}
+#nav-right > ul li strong {
+    font-size: 2rem;
+}
+.right-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10%;
+}
+#right-01 {
+    height: 60%;
+    background-color: var(--white);
+    color: var(--black-bg);
+    position: relative;
+}
+#right-02 {
+    height: 40%;
+    background-color: var(--point-green);
+    position: relative;
+}
+#right-02 .line::after {
+    background-color: var(--white);
+}
+#nav-right .circle-btn {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+}
+#right-02 .circle-btn {
+    background-color: var(--white);
+    color: var(--point-green);
 }

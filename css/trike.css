@@ -3,9 +3,9 @@
     position: relative;
 }
 #trike-title {
-    height: 150vh;
+    height: 60rem;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     margin-top: 10vh;
     padding: 5rem;
@@ -14,7 +14,7 @@
     width: 100%;
 }
 #titleDiv {
-    margin-right: 10vw;
+    margin-right: 5rem;
 }
 
 #trike-desc {
@@ -45,7 +45,7 @@
 
 #bikeShare {
     background-color: var(--gray-bg-dark);
-    height: 250vh;
+    height: 110rem;
     padding-top: 30vh;
     position: relative;
 }
@@ -88,7 +88,7 @@
 #num-carousel {
     position: absolute;
     left: 0;
-    top: 120vh;
+    top: 60rem;
     display: flex;
     font-size: 20rem;
     color: var(--white);
@@ -132,7 +132,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 800vw;
+    width: 700vw;
     height: 100%;
     animation: toRight 40s linear infinite;
 }
@@ -140,7 +140,7 @@
     display: flex;
 }
 .bikeImg-carousel > div {
-    width: 80vw;
+    width: 70vw;
     height: 32rem;
     display: flex;
     align-items: center;
@@ -151,7 +151,7 @@
 }
 
 #yourWay {
-    height: 150vh;
+    height: 65rem;
     background-color: var(--point-green);
     color: var(--white);
     padding-top: 10rem;
@@ -225,7 +225,7 @@
 #yw-lists > ul {
     opacity: 0;
     position: absolute;
-    top: 70vh;
+    top: 28rem;
     left: 50vw;
     font-size: var(--font-size-small);
     transition: opacity 0.5s, transform 1s;

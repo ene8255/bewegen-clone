@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -11,9 +12,15 @@
     <link rel="stylesheet" href="css/details.css">
     <link rel="stylesheet" href="css/trike.css">
     <link rel="stylesheet" href="css/experts.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <!-- stylesheet // -->
+    <!-- js -->
     <script src="js/header.js" defer></script>
     <script src="js/details.js" defer></script>
     <script src="js/trike.js" defer></script>
+    <script src="js/blog.js" defer></script>
+    <!-- js // -->
     <title>The Bewegen Bike Share System</title>
 </head>
 <body>
@@ -70,61 +77,75 @@
             </ul>
         </div>
         <nav>
-            <div>
+            <div id="nav-left">
                 <h1>Bewegen logo</h1>
-                <span>Close</span>
+                <span id="nav-close">Close</span>
             </div>
-            <div>
-                <div>
-                    <span></span>
+            <div id="nav-middle">
+                <div id="nav-social">
+                    <span class="line"></span>
                     <ul>
                         <li><i class="fa-brands fa-facebook-f"></i></li>
                         <li><i class="fa-brands fa-twitter"></i></li>
                         <li><i class="fa-brands fa-linkedin-in"></i></li>
                     </ul>
                 </div>
-                <div>
+                <div id="nav-menu-ul">
                     <ul>
-                        <li>Bike Share Network</li>
-                        <li>Case Studies</li>
-                        <li>Blog</li>
+                        <li>
+                            <span class="hover-green">Bike Share Network</span>
+                        </li>
+                        <li>
+                            <span class="hover-green">Case Studies</span>
+                        </li>
+                        <li>
+                            <span class="hover-green">Blog</span>
+                        </li>
                     </ul>
                 </div>
                 <div>
-                    <span></span>
+                    <span class="line"></span>
                 </div>
-                <div>
+                <div id="nav-language">
                     <ul>
-                        <li>EN</li>
+                        <li class="on">EN</li>
                         <li>FR</li>
                         <li>ES</li>
                         <li>PT</li>
                         <li>DE</li>
                     </ul>
-                    <span>
+                    <span class="circle-btn">
                         <i class="fa-solid fa-xmark"></i>
                     </span>
                 </div>
             </div>
-            <div>
+            <div id="nav-right">
                 <ul>
-                    <li>
-                        <div>
+                    <li id="right-01">
+                        <div class="right-title">
                             <span>01</span>
-                            <span></span>
+                            <span class="line"></span>
                             <span>Contact us</span>
                         </div>
                         <strong>Book an Appointment</strong>
-                        <span><i class="fa-regular fa-calendar-check"></i></span>
-                    </li>
-                    <li>
                         <div>
+                            <span class="circle-btn gray-btn">
+                                <i class="fa-regular fa-calendar-check"></i>
+                            </span>
+                        </div>
+                    </li>
+                    <li id="right-02">
+                        <div class="right-title">
                             <span>02</span>
-                            <span></span>
+                            <span class="line"></span>
                             <span>Customize</span>
                         </div>
                         <strong>Build Your Bike Share</strong>
-                        <span><i class="fa-solid fa-bicycle"></i></span>
+                        <div>
+                            <span class="circle-btn">
+                                <i class="fa-solid fa-bicycle"></i>
+                            </span>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -604,57 +625,81 @@
                 </div>
             </section>
             <!-- experts // -->
-            <section class="inner">
-                <ul>
-                    <li>
-                        <div>
-                            <p>11/09/19</p>
-                            <h4>Announcement of New IT Tools for Bike Share Operators</h4>
-                            <span><i class="fa-solid fa-plus"></i></span>
-                        </div>
-                        <div>
-                            <img src="images/Bike_share.JPG" alt="bike share">
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <p>23/08/19</p>
-                            <h4>Bewegen Announces IT Partnership with WeGoShare</h4>
-                            <span><i class="fa-solid fa-plus"></i></span>
-                        </div>
-                        <div>
-                            <img src="images/Wegoshare_Logo_IT.png" alt="Wegoshare_Logo">
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <p>05/09/19</p>
-                            <h4>Bewegen E-Bike Introduces Location-Based Electric Assistance</h4>
-                            <span><i class="fa-solid fa-plus"></i></span>
-                        </div>
-                        <div>
-                            <img src="images/BWG_LATE_FOR_MEETING.jpg" alt="LATE_FOR_MEETING">
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <p>24/06/19</p>
-                            <h4>Bewegen Launches New Electric Trike Cargo Vehicle</h4>
-                            <span><i class="fa-solid fa-plus"></i></span>
-                        </div>
-                        <div>
-                            <img src="images/TRIKE_news-01.png" alt="TRIKE">
-                        </div>
-                    </li>
-                </ul>
-                <div>
-                    <span></span>
-                    <span>See all news</span>
+            <!-- blog -->
+            <section id="blog" class="inner">
+                <div id="blog-carousel">
+                    <div id="blog-carousel-container">
+                        <ul id="blogUl">
+                            <li class="blogLi">
+                                <div>
+                                    <p>11/09/19</p>
+                                    <h4 class="blog-title">Announcement of New IT Tools for Bike Share Operators</h4>
+                                    <span class="circle-btn">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </span>
+                                </div>
+                                <div class="blog-img">
+                                    <img src="images/Bike_share.JPG" alt="bike share">
+                                </div>
+                            </li>
+                            <li class="blogLi">
+                                <div>
+                                    <p>23/08/19</p>
+                                    <h4 class="blog-title">Bewegen Announces IT Partnership with WeGoShare</h4>
+                                    <span class="circle-btn">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </span>
+                                </div>
+                                <div class="blog-img">
+                                    <img src="images/Wegoshare_Logo_IT.png" alt="Wegoshare_Logo">
+                                </div>
+                            </li>
+                            <li class="blogLi">
+                                <div>
+                                    <p>05/09/19</p>
+                                    <h4 class="blog-title">Bewegen E-Bike Introduces Location-Based Electric Assistance</h4>
+                                    <span class="circle-btn">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </span>
+                                </div>
+                                <div class="blog-img">
+                                    <img src="images/BWG_LATE_FOR_MEETING.jpg" alt="LATE_FOR_MEETING">
+                                </div>
+                            </li>
+                            <li class="blogLi">
+                                <div>
+                                    <p>24/06/19</p>
+                                    <h4 class="blog-title">Bewegen Launches New Electric Trike Cargo Vehicle</h4>
+                                    <span class="circle-btn">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </span>
+                                </div>
+                                <div class="blog-img">
+                                    <img src="images/TRIKE_news-01.png" alt="TRIKE">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="blog-nav-container">
+                        <ul id="blogNav" class="carousel-nav">
+                            <li class="circle-btn left disabled">
+                                <i class="fa-solid fa-angle-left"></i>
+                            </li>
+                            <li class="circle-btn right">
+                                <i class="fa-solid fa-angle-right"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="allNews">
+                    <span class="hover-green-2">See all news</span>
                 </div>
             </section>
         </main>
+        <!-- blog // -->
+        <!-- footer -->
         <footer class="inner">
-            <div>
+            <div id="footer-logo" class="flex">
                 <h1>Bewegen logo</h1>
                 <ul>
                     <li><i class="fa-brands fa-facebook-f"></i></li>
@@ -662,58 +707,81 @@
                     <li><i class="fa-brands fa-linkedin-in"></i></li>
                 </ul>
             </div>
-            <div>
-                <strong>Book an<br/>Appointment</strong>
-                <span><i class="fa-regular fa-calendar-check"></i></span>
+            <div id="book" class="flex">
+                <strong>Book an Appointment</strong>
+                <span class="circle-btn">
+                    <i class="fa-regular fa-calendar-check"></i>
+                </span>
             </div>
-            <div>
+            <div id="case" class="flex">
                 <ul>
-                    <li>Case Studies</li>
-                    <li>Summit County</li>
-                    <li>Peninsula Papagayo</li>
+                    <li class="gray-color">Case Studies</li>
+                    <li>
+                        <span class="hover-green">Summit County</span>
+                    </li>
+                    <li>
+                        <span class="hover-green">Peninsula Papagayo</span>
+                    </li>
                 </ul>
                 <ul>
-                    <li>Our Network</li>
-                    <li>Leiria</li>
-                    <li>Pioneer Valley</li>
-                    <li>Raleigh</li>
-                    <li>Richmond</li>
-                    <li>See all</li>
+                    <li class="gray-color">Our Network</li>
+                    <li>
+                        <span class="hover-green">Leiria</span>
+                    </li>
+                    <li>
+                        <span class="hover-green">Pioneer Valley</span>
+                    </li>
+                    <li>
+                        <span class="hover-green">Raleigh</span>
+                    </li>
+                    <li>
+                        <span class="hover-green">Richmond</span>
+                    </li>
+                    <li id="seeAll" class="hover-green-2">See all</li>
                 </ul>
             </div>
-            <div>
+            <div id="create" class="flex">
                 <strong>Create your own bike share</strong>
-                <span><i class="fa-solid fa-bicycle"></i></span>
+                <span class="circle-btn">
+                    <i class="fa-solid fa-bicycle"></i>
+                </span>
             </div>
-            <div>
+            <div id="contact" class="flex">
                 <ul>
-                    <li>Worldwide</li>
-                    <li>1 418 228.0220</li>
+                    <li class="gray-color">Worldwide</li>
+                    <li class="hover-green">1 418 228.0220</li>
                 </ul>
                 <ul>
-                    <li>Canada and the US</li>
-                    <li>1 418 228.0220</li>
+                    <li class="gray-color">Canada and the US</li>
+                    <li class="hover-green">1 418 228.0220</li>
                 </ul>
                 <ul>
-                    <li>Say Hello</li>
-                    <li>info@bewegen.com</li>
+                    <li class="gray-color">Say Hello</li>
+                    <li class="hover-green">info@bewegen.com</li>
                 </ul>
             </div>
-            <div>
+            <div id="email">
                 <ul>
-                    <li>Newsletter</li>
+                    <li class="gray-color">Newsletter</li>
                     <li>Get the latest news about Bewegen</li>
-                    <li><input type="text"></li>
+                    <li id="email-input">
+                        <input type="text" placeholder="Hello@email.com">
+                        <span class="circle-btn"><i class="fa-solid fa-angle-right"></i></span>
+                    </li>
                 </ul>
             </div>
-            <div>
-                <ul>
+            <div id="copyright" class="flex">
+                <ul class="flex">
                     <li>Copyright 2022 Bewegen Technologies inc.</li>
-                    <li>Legal Notice</li>
-                    <li>Privacy Policy</li>
+                    <li class="hover-green">Legal Notice</li>
+                    <li class="hover-green">Privacy Policy</li>
+                </ul>
+                <ul class="flex">
+                    <li class="hover-green">Website by Locomotive</li>
                 </ul>
             </div>
         </footer>
+        <!-- footer // -->
     </div>
 </body>
 </html>

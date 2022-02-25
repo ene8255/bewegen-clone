@@ -61,6 +61,7 @@ input, select { outline: none; border: none; font-family: inherit; background-co
     --gray-bg: #f5f5f5;
     --gray-hover: #4f4f4f;
     --gray-bg-dark: #e6e6e6;
+    --footer-bg: #2a2a2a;
 }
 
 #wrap {
@@ -103,7 +104,7 @@ input, select { outline: none; border: none; font-family: inherit; background-co
     transition: 0.5s;
     transform: scaleX(0);
 }
-.hover-green:hover:after {
+.hover-green:hover::after {
     transform: scaleX(100%);
 }
 
@@ -176,6 +177,10 @@ input, select { outline: none; border: none; font-family: inherit; background-co
 
 .green-color {
     color: var(--point-green);
+}
+.gray-color {
+    color: #939393;
+    margin-bottom: 1.5rem;
 }
 
 

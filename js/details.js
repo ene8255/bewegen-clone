@@ -1,5 +1,7 @@
 const mainDetail = document.querySelector('#mainDetail');
 const mainID = document.querySelector('#mainImgDiv');
+const body = document.querySelector('body');
+
 
 // 스크롤 이벤트
 document.addEventListener('scroll', () => {
@@ -8,15 +10,23 @@ document.addEventListener('scroll', () => {
     const bottomMD = mainDetail.getBoundingClientRect().bottom;
     if(sct >= bottomMD) {
         // mainID.classList.remove('zoom');
-        mainID.classList.add('zoom');
+        // mainID.classList.add('zoom');
         // mainDetail.classList.remove('fixed');
-        mainDetail.classList.remove('fixed');
-    }else if(sct >= ostMD) {
+        // mainDetail.classList.remove('fixed');
+        // body.style.overflow = 'auto';
+    }else if(sct >= ostMD && sct <= ostMD + 100) {
         mainID.classList.add('zoom');
         mainDetail.classList.add('fixed');
+        // body.style.overflow = 'hidden';
     }else if(sct <= 100) {
         mainID.classList.remove('zoom');
         mainDetail.classList.remove('fixed');
+        // body.style.overflow = 'auto';
+        // mainImg.style.animationDirection = 'reverse';
+    }else {
+        mainID.classList.add('zoom');
+        mainDetail.classList.remove('fixed');
+        // body.style.overflow = 'auto';
     }
 })
 
@@ -78,6 +88,7 @@ tOneNav.addEventListener('click', (e) => {
         navBtns[0].classList.add('disabled');
     }else if(currentOne === 7) {
         navBtns[1].classList.add('disabled');
+        body.style.overflow = 'auto';
     }else {
         navBtns.forEach(btn => btn.classList.remove('disabled'));
     }
@@ -91,4 +102,5 @@ skipBtn.addEventListener('click', () => {
     const ostTrike = trike.offsetTop;
     mainDetail.classList.remove('fixed');
     window.scrollTo(0, ostTrike);
+    body.style.overflow = 'auto';
 })

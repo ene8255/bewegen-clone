@@ -1,0 +1,92 @@
+#blog {
+    height: 65rem;
+    background-color: var(--white);
+    padding-top: 15rem;
+}
+
+
+#blog-carousel-container {
+    width: 100%;
+    height: 25rem;
+    position: relative;
+    overflow: hidden;
+}
+#blogUl {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.blogLi {
+    width: 65rem;
+    height: 25rem;
+    display: flex;
+    font-size: var(--font-size-small);
+    padding-left: 8rem;
+    position: absolute;
+    top: 0;
+}
+.blogLi > div {
+    width: 50%;
+    position: relative;
+}
+.blog-title {
+    font-size: var(--font-size-medium);
+    margin-top: 1.5rem;
+    width: 80%;
+}
+.blogLi .circle-btn {
+    position: absolute;
+    left: 0;
+    bottom: 1rem;
+    background-color: var(--gray-btn);
+}
+.blog-img {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.blog-img img {
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#blog-nav-container {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 3rem;
+    border-bottom: 2px solid var(--gray-btn);
+}
+#blogNav .circle-btn::before {
+    background-color: var(--gray-btn);
+}
+
+#allNews {
+    width: 100%;
+    text-align: center;
+    margin-top: 3rem;
+    font-size: var(--font-size-small);
+}
+
+.hover-green-2 {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+}
+.hover-green-2::after {
+    margin-top: 3px;
+    display: block;
+    content: "";
+    height: 2px;
+    background-color: var(--point-green);
+    transition: 0.3s;
+    transform: scaleX(100%);
+}
+.hover-green-2:hover:after {
+    transform: scaleX(60%);
+}

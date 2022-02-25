@@ -50,6 +50,7 @@
     background-color: var(--detail-bg);
     height: 100vh;
     position: relative;
+    /* overflow: hidden; */
 }
 #mainDetail.fixed {
     position: sticky;
