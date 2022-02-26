@@ -28,3 +28,25 @@ document.addEventListener('scroll', () => {
         hBottom.style.left = '-200px';
     }
 })
+
+
+// 토글 메뉴
+const nav = document.querySelector('nav');
+const toggleBtn = document.querySelector('#toggle');
+const navClose = document.querySelector('#nav-close');
+const navClose2 = document.querySelector('#nav-close-2');
+
+toggleBtn.addEventListener('click', () => {
+    nav.style.display = 'block';
+    body.style.overflow = 'hidden';
+})
+
+navClose.addEventListener('click', () => {
+    nav.style.display = 'none';
+    body.style.overflow = 'auto';
+})
+
+navClose2.addEventListener('click', () => {
+    nav.style.display = 'none';
+    body.style.overflow = 'auto';
+})

@@ -124,7 +124,7 @@
     position: absolute;
     left: 0;
     bottom: 5vh;
-    height: 32rem;
+    height: 35rem;
     overflow: hidden;
 }
 #b-carousel-container {
@@ -141,7 +141,7 @@
 }
 .bikeImg-carousel > div {
     width: 70vw;
-    height: 32rem;
+    height: 35rem;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,3 +1,44 @@
+@keyframes navBefore {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0;
+    }
+}
+@keyframes navAfter {
+    0% {
+        right: -100%;
+    }
+    100% {
+        right: 0;
+    }
+}
+@keyframes navOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes navTraY {
+    0% {
+        transform: translateY(1rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes height0to100 {
+    0% {
+        height: 0%;
+    }
+    100% {
+        height: 100%;
+    }
+}
+
 header {
     width: var(--header-width);
     height: 100vh;
@@ -35,6 +76,7 @@ header {
     width: 32px;
     height: 28px;
     margin: 0 auto;
+    cursor: pointer;
 }
 #toggle span {
     display: block;
@@ -172,9 +214,6 @@ nav {
     width: 100%;
     height: 100vh;
     z-index: 99;
-    background-color: var(--black-bg);
-    color: var(--white);
-    display: flex;
     display: none;
 }
 nav::before {
@@ -186,6 +225,8 @@ nav::before {
     background-color: var(--black-bg);
     width: 100%;
     height: 50%;
+    transition: 0.5s;
+    animation: navBefore 0.5s 0.5s;
 }
 nav::after {
     content: "";
@@ -196,6 +237,18 @@ nav::after {
     background-color: var(--black-bg);
     width: 100%;
     height: 50%;
+    transition: 0.5s;
+    animation: navAfter 0.5s 0.5s;
+}
+
+#nav-div {
+    width: 100%;
+    height: 100%;
+    background-color: var(--black-bg);
+    color: var(--white);
+    display: flex;
+    opacity: 0;
+    animation: navOpacity 0.5s 0.5s forwards;
 }
 
 #nav-left {
@@ -203,6 +256,11 @@ nav::after {
     height: 100%;
     padding: 2%;
     position: relative;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-name: navOpacity, navTraY;
+    animation-delay: 1s, 1s;
+    animation-duration: 1s, 1s;
 }
 #nav-left > h1 {
     font-size: 0;
@@ -217,12 +275,18 @@ nav::after {
     left: 40%;
     transform: translate(-50%, -50%) rotate(-90deg);
     font-size: var(--font-size-medium);
+    cursor: pointer;
 }
 
 #nav-middle {
     width: 60%;
     height: 100%;
     padding: 3%;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-name: navOpacity, navTraY;
+    animation-delay: 1s, 1s;
+    animation-duration: 1s, 1s;
 }
 #nav-middle .line {
     margin: 0;
@@ -292,12 +356,26 @@ nav::after {
 #nav-right {
     width: 25%;
     height: 100%;
+    
 }
 #nav-right > ul {
     height: 100%;
 }
-#nav-right > ul li {
+
+.right-bg {
+    width: 100%;
+    height: 0%;
     padding: 10%;
+    animation: height0to100 1s 0.8s forwards;
+}
+.right-cont {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-name: navOpacity, navTraY;
+    animation-delay: 1s, 1s;
+    animation-duration: 1s, 1s;
 }
 #nav-right > ul li strong {
     font-size: 2rem;
@@ -309,14 +387,20 @@ nav::after {
 }
 #right-01 {
     height: 60%;
-    background-color: var(--white);
     color: var(--black-bg);
     position: relative;
+    /* animation: height0to60 1s 1s forwards; */
+}
+#right-01 .right-bg {
+    background-color: var(--white);
 }
 #right-02 {
     height: 40%;
-    background-color: var(--point-green);
     position: relative;
+    /* animation: height0to40 1s 1s forwards; */
+}
+#right-02 .right-bg {
+    background-color: var(--point-green);
 }
 #right-02 .line::after {
     background-color: var(--white);
