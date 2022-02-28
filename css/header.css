@@ -131,10 +131,12 @@ header {
 #h-bottom ul {
     /* transform: rotate(-90deg); */
     height: 200px;
+    width: 10%;
     position: absolute;
-    bottom: 5rem;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
+    background-color: aqua;
 }
 #h-bottom ul li {
     transform: rotate(-180deg);
@@ -142,6 +144,14 @@ header {
     text-orientation: sideways-right;
     height: 100%;
     width: 100%;
+    background-color: aquamarine;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+#h-bottom ul li.on {
+    opacity: 1;
 }
 /* header // */
 

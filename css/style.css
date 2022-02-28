@@ -31,6 +31,10 @@
 li { list-style: none; }
 input, select { outline: none; border: none; font-family: inherit; background-color: transparent; }
 
+html, body {
+    /* overflow-x: hidden; */
+    /* overflow-y: auto; */
+}
 
 /* 변수 정의 */
 :root {
@@ -61,22 +65,23 @@ input, select { outline: none; border: none; font-family: inherit; background-co
 
 /* scrollbar 스타일 정의 */
 ::-webkit-scrollbar {
-    width: 8px;
+    /* width: 8px; */
+    display: none;
 }
 ::-webkit-scrollbar-thumb {
-    height: 8%;
+    /* height: 8%;
     background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
+    border-radius: 8px; */
 }
 ::-webkit-scrollbar-track{ 
-    background-color: transparent; 
+    /* background-color: transparent;  */
 }
 
 
 /* 공통 class 스타일 정의 */
     /* .inner */
 .inner {
-    width: calc(100vw - var(--header-width) - 8px);
+    width: calc(100vw - var(--header-width));
     float: right;
 }
     /* .inner-container */
