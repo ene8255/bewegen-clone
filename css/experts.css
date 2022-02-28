@@ -1,13 +1,26 @@
+/* animation */
+@keyframes toLeft {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -300%;
+    }
+}
+
+/* experts */
 #experts {
     height: 190rem;
     background-color: var(--gray-bg-dark);
     padding-top: 10rem;
 }
 
+    /* #team */
 #team {
     height: 40rem;
     position: relative;
 }
+
 #team-desc {
     position: absolute;
     bottom: 0;
@@ -25,6 +38,7 @@
     transform: translateX(-50%);
     z-index: 3;
 }
+
 #team-desc-box {
     background-color: var(--white);
     height: 60%;
@@ -40,6 +54,7 @@
     font-size: 14px;
     padding-top: 0.8rem;
 }
+
 #teamImg {
     width: 65%;
     position: absolute;
@@ -50,6 +65,7 @@
     width: 100%;
 }
 
+    /* #w-carousel */
 #w-carousel {
     position: relative;
     height: 20rem;
@@ -64,6 +80,7 @@
     height: 100%;
     animation: toLeft 60s linear infinite;
 }
+
 .word-carousel {
     display: flex;
 }
@@ -76,6 +93,7 @@
 }
 
 
+    /* #partners */
 #partners {
     display: flex;
     justify-content: space-between;
@@ -90,12 +108,14 @@
 #partners img {
     width: 90%;
 }
+
 .p-gray {
     color: gray;
     margin-top: 2rem;
     margin-bottom: 1rem;
 }
 
+    /* #michel */
 #michel {
     display: flex;
     height: 50vh;
@@ -109,6 +129,7 @@
     display: flex;
     justify-content: center;
 }
+
 #michel-img {
     width: 60%;
     max-width: 300px;
@@ -127,6 +148,7 @@
 #michel-auto img {
     width: 40%;
 }
+
 #michel-desc {
     line-height: 1.5rem;
 }

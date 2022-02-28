@@ -1,3 +1,4 @@
+/* animation */
 @keyframes zoomIn {
     0% {
         transform: scale(1);
@@ -34,6 +35,8 @@
     }
 }
 
+/* details */
+    /* #mainTitle */
 #mainTitle {
     padding-top: 160px;
     height: 50vh;
@@ -46,34 +49,46 @@
     margin-top: 32px;
 }
 
+    /* #mainDetail */
 #mainDetail{
     background-color: var(--detail-bg);
     height: 100vh;
     position: relative;
-    /* overflow: hidden; */
 }
 #mainDetail.fixed {
     position: sticky;
     top: 0;
     left: 0;
-    overflow: hidden;
 }
+
 .gray-bg {
     position: absolute;
     top: 0;
-    right: -50vw;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.gray-bg::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -100%;
     width: 35vw;
     height: 100vh;
     background-color: var(--gray-bg);
     z-index: 2;
 }
-#mainDetail.fixed .gray-bg {
+
+#mainDetail.fixed .gray-bg::after {
     right: 0;
     transition: right 1s 1s;
 }
 #mainDetail.fixed .text-carousel {
     animation: tCarouselShow 1s 2s forwards;
 }
+
 #mainImgDiv {
     position: relative;
     transition: 0.5s;
@@ -81,11 +96,12 @@
 #mainImgDiv.zoom {
     animation: zoomInDiv 1s 1s forwards;
 }
+
 #mainDetail img {
-    width: 110%;
+    width: 100%;
     position: absolute;
     top: -20vh;
-    left: -7%;
+    left: -5%;
     transition: 0.5s;
 }
 #mainImgDiv.zoom img {
@@ -94,7 +110,7 @@
     top: -50vh;
 }
 
-
+    /* .text-carousel */
 #mainDetail .text-carousel {
     position: absolute;
     top: 50%;
@@ -110,6 +126,7 @@
     min-height: 450px;
     transition: 0.5s;
 }
+
 .carousel-nav {
     display: flex;
     justify-content: flex-end;
@@ -117,6 +134,7 @@
     width: 100%;
     height: 80px;
 }
+
 .carousel-nav .circle-btn {
     width: 40px;
     height: 40px;
@@ -129,6 +147,7 @@
     width: 50px;
     height: 50px;
 }
+
 .carousel-nav li:first-child {
     margin-right: 10%;
 }
@@ -147,7 +166,6 @@
 .text-box {
     width: 100%;
     height: 100%;
-    /* display: flex; */
     position: absolute;
     top: 0;
     left: 0;
@@ -191,4 +209,3 @@
     line-height: 3rem;
     border-radius: 1.5rem;
 }
-

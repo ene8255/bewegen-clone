@@ -1,3 +1,4 @@
+/* footer */
 footer {
     height: 55rem;
     background-color: var(--footer-bg);
@@ -17,17 +18,20 @@ footer {
 footer > div {
     padding: 0 6rem;
 }
+
 .flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+    /* #footer-logo */
 #footer-logo {
     grid-area: fl;
     border-bottom: 1px solid #484848;
     border-right: 1px solid #484848;
 }
+
 #footer-logo > h1 {
     width: 11%;
     height: 4rem;
@@ -35,6 +39,7 @@ footer > div {
     background: url(../images/logo_b.png) no-repeat center center;
     background-size: 100%;
 }
+
 #footer-logo > ul {
     width: 10%;
     display: flex;
@@ -49,16 +54,19 @@ footer > div {
     color: var(--point-green);
 }
 
+    /* #book */
 #book {
     grid-area: book;
     border-bottom: 1px solid #484848;
     background-color: var(--point-green);
     padding: 0 3rem;
 }
+
 #book > strong, #create > strong {
     width: 50%;
     font-size: 1.2rem;
 }
+
 #book .circle-btn {
     background-color: var(--white);
     color: var(--point-green);
@@ -67,6 +75,7 @@ footer > div {
     color: var(--white);
 }
 
+    /* #case */
 #case {
     grid-area: case;
     border-bottom: 1px solid #484848;
@@ -76,28 +85,34 @@ footer > div {
     padding: 4rem 6rem;
     font-size: var(--font-size-medium);
 }
+
+#case > ul:first-child {
+    margin-right: 10rem;
+}
+
 #case .hover-green {
     line-height: 2.5rem;
 }
 #case .hover-green::after {
     height: 2px;
 }
+
 #case .gray-color {
     font-size: 14px;
 }
-#case > ul:first-child {
-    margin-right: 10rem;
-}
+
 #seeAll {
     font-size: 14px;
     margin-top: 1rem;
 }
 
+    /* #create */
 #create {
     grid-area: create;
     border-bottom: 1px solid #484848;
     padding: 0 3rem;
 }
+
 #create .circle-btn {
     background-color: var(--black-bg);
 }
@@ -108,10 +123,12 @@ footer > div {
     background-color: var(--white);
 }
 
+    /* #contact */
 #contact {
     grid-area: contact;
     border-right: 1px solid #484848;
 }
+
 #contact .hover-green {
     font-size: var(--font-size-medium);
 }
@@ -120,11 +137,13 @@ footer > div {
     margin-top: 4px;
 }
 
+    /* #email */
 #email {
     grid-area: email;
     padding: 0 3rem;
     margin-top: 4.5rem;
 }
+
 #email li:nth-child(2) {
     width: 90%;
     font-size: var(--font-size-medium);
@@ -135,14 +154,6 @@ footer > div {
 #email-input {
     position: relative;
 }
-#email input {
-    width: 100%;
-    height: 4rem;
-    background-color: var(--black-bg);
-    padding: 1.5rem;
-    color: var(--white);
-    font-size: var(--font-size-small);
-}
 #email-input::after {
     content: "";
     display: block;
@@ -150,6 +161,16 @@ footer > div {
     height: 2px;
     background-color: var(--point-green);
 }
+
+#email-input input {
+    width: 100%;
+    height: 4rem;
+    background-color: var(--black-bg);
+    padding: 1.5rem;
+    color: var(--white);
+    font-size: var(--font-size-small);
+}
+
 #email-input .circle-btn {
     position: absolute;
     right: 1.2rem;
@@ -166,7 +187,7 @@ footer > div {
     color: var(--black-bg);
 }
 
-
+    /* #copyright */
 #copyright {
     grid-area: copyright;
     border-top: 1px solid #484848;

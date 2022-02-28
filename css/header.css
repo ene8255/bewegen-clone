@@ -1,3 +1,4 @@
+/* animation */
 @keyframes navBefore {
     0% {
         left: -100%;
@@ -39,6 +40,7 @@
     }
 }
 
+/* header */
 header {
     width: var(--header-width);
     height: 100vh;
@@ -47,6 +49,8 @@ header {
     left: 0;
     z-index: 90;
 }
+
+    /* #h-top */
 #h-top {
     background-color: var(--black-bg);
     color: var(--white);
@@ -64,6 +68,7 @@ header {
     justify-content: center;
     align-items: center;
 }
+
 #topLogo {
     font-size: 0;
     width: 50px;
@@ -72,6 +77,7 @@ header {
     background-size: cover;
     margin-bottom: 32px;
 }
+
 #toggle {
     width: 32px;
     height: 28px;
@@ -98,6 +104,7 @@ header {
 #toggle:hover span:nth-child(2) {
     width: 32px;
 }
+
 #bottomLogo {
     transform: rotate(-90deg);
     font-size: 24px;
@@ -113,25 +120,21 @@ header {
     right: -16px;
 }
 
+    /* #h-bottom */
 #h-bottom {
     height: 50vh;
-    /* background-color: rgba(255, 255, 255, 0.9); */
     position: relative;
     top: 0;
     left: -200px;
-    /* left: 0; */
     transition: 0.5s;
 }
 #h-bottom ul {
     /* transform: rotate(-90deg); */
     height: 200px;
-    /* width: 40px; */
     position: absolute;
-    /* bottom: 5%; */
     bottom: 5rem;
     left: 50%;
     transform: translateX(-50%);
-    /* display: flex; */
 }
 #h-bottom ul li {
     transform: rotate(-180deg);
@@ -139,11 +142,11 @@ header {
     text-orientation: sideways-right;
     height: 100%;
     width: 100%;
-    /* position: absolute;
-    top: 0;
-    left: 0; */
 }
+/* header // */
 
+
+/* h-center */
 #h-center {
     position: absolute;
     top: 0;
@@ -156,7 +159,10 @@ header {
 #h-center ul li:first-child {
     margin-right: 50%;
 }
+/* h-center // */
 
+
+/* menu-right */
 #menu-right {
     position: fixed;
     top: 0;
@@ -188,10 +194,12 @@ header {
 #menu-right .rotate90 {
     width: 150px;
 }
+
 .rotate90 {
     display: inline-block;
     transform: rotate(90deg);
 }
+
 #language {
     width: 4rem;
     transition: 0.5s;
@@ -199,14 +207,17 @@ header {
 #language.disappear {
     transform: translateX(200%);
 }
+
 #reachUS, #buildYour {
     transition: 0.5s;
 }
 #reachUs.disappear, #buildYour.disappear {
     transform: translateX(300%);
 }
+/* menu-right // */
 
 
+/* nav */
 nav {
     position: fixed;
     top: 0;
@@ -251,6 +262,7 @@ nav::after {
     animation: navOpacity 0.5s 0.5s forwards;
 }
 
+    /* #nav-left */
 #nav-left {
     width: 15%;
     height: 100%;
@@ -278,6 +290,7 @@ nav::after {
     cursor: pointer;
 }
 
+    /* nav-middle */
 #nav-middle {
     width: 60%;
     height: 100%;
@@ -295,6 +308,7 @@ nav::after {
 #nav-middle .line::after {
     background-color: var(--white);
 }
+
 #nav-social {
     display: flex;
     justify-content: space-between;
@@ -328,6 +342,7 @@ nav::after {
     align-items: center;
     margin-top: 20%;
 }
+
 #nav-language > ul {
     display: flex;
     justify-content: space-between;
@@ -353,13 +368,22 @@ nav::after {
     background-color: var(--white);
 }
 
+    /* nav-right */
 #nav-right {
     width: 25%;
     height: 100%;
-    
 }
 #nav-right > ul {
     height: 100%;
+}
+#nav-right > ul li strong {
+    font-size: 2rem;
+}
+
+#nav-right .circle-btn {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
 }
 
 .right-bg {
@@ -368,6 +392,7 @@ nav::after {
     padding: 10%;
     animation: height0to100 1s 0.8s forwards;
 }
+
 .right-cont {
     width: 100%;
     height: 100%;
@@ -377,27 +402,25 @@ nav::after {
     animation-delay: 1s, 1s;
     animation-duration: 1s, 1s;
 }
-#nav-right > ul li strong {
-    font-size: 2rem;
-}
+
 .right-title {
     display: flex;
     align-items: center;
     margin-bottom: 10%;
 }
+
 #right-01 {
     height: 60%;
     color: var(--black-bg);
     position: relative;
-    /* animation: height0to60 1s 1s forwards; */
 }
 #right-01 .right-bg {
     background-color: var(--white);
 }
+
 #right-02 {
     height: 40%;
     position: relative;
-    /* animation: height0to40 1s 1s forwards; */
 }
 #right-02 .right-bg {
     background-color: var(--point-green);
@@ -405,12 +428,8 @@ nav::after {
 #right-02 .line::after {
     background-color: var(--white);
 }
-#nav-right .circle-btn {
-    position: absolute;
-    bottom: 10%;
-    right: 5%;
-}
 #right-02 .circle-btn {
     background-color: var(--white);
     color: var(--point-green);
 }
+/* nav // */

@@ -1,7 +1,20 @@
+/* animation */
+@keyframes toRight {
+    0% {
+        right: 0;
+    }
+    100% {
+        right: -445%;
+    }
+}
+
+/* trike */
 #trike {
     background-color: var(--gray-bg);
     position: relative;
 }
+
+    /* #trike-title */
 #trike-title {
     height: 60rem;
     display: flex;
@@ -13,10 +26,12 @@
 #trike-title img {
     width: 100%;
 }
+
 #titleDiv {
     margin-right: 5rem;
 }
 
+    /* #trike-desc */
 #trike-desc {
     display: flex;
     justify-content: space-evenly;
@@ -35,6 +50,7 @@
 #trike-desc li:not(:last-child) {
     border-right: 1px solid var(--gray-bg-dark);
 }
+
 .descNum {
     margin-bottom: 2rem;
 }
@@ -43,12 +59,14 @@
 }
 
 
+    /* #bikeShare */
 #bikeShare {
     background-color: var(--gray-bg-dark);
     height: 110rem;
     padding-top: 30vh;
     position: relative;
 }
+
 #bs-desc {
     display: flex;
     align-items: center;
@@ -57,6 +75,7 @@
 #bs-desc > div {
     width: 45%;
 }
+
 .bs-desc-p {
     margin-top: 10vh;
     font-size: var(--font-size-small);
@@ -70,6 +89,7 @@
     background-color: var(--black-bg);
     margin-bottom: 7vh;
 }
+
 #bsRight > div {
     margin-top: 5vh;
     display: flex;
@@ -81,10 +101,11 @@
     margin-left: 5vw;
 }
 
-#t-carousel-two-container {
+    /* #t-c-two-container */
+#t-c-two-container {
     margin-top: 5vh;
 }
-
+    /* #num-carousel */
 #num-carousel {
     position: absolute;
     left: 0;
@@ -113,6 +134,7 @@
     left: 0;
 }
 
+    /* .text-carousel */
 #t-c-two-container .text-carousel {
     float: right;
     margin-right: 10vw;
@@ -120,6 +142,7 @@
     min-height: 400px;
 }
 
+    /* #b-carousel */
 #b-carousel {
     position: absolute;
     left: 0;
@@ -127,6 +150,7 @@
     height: 35rem;
     overflow: hidden;
 }
+
 #b-carousel-container {
     display: flex;
     position: absolute;
@@ -136,6 +160,7 @@
     height: 100%;
     animation: toRight 40s linear infinite;
 }
+
 .bikeImg-carousel {
     display: flex;
 }
@@ -150,12 +175,22 @@
     height: 100%;
 }
 
+
+    /* #yourWay */
 #yourWay {
     height: 65rem;
     background-color: var(--point-green);
     color: var(--white);
     padding-top: 10rem;
     position: relative;
+}
+
+    /* #yw-title */
+.ywleft {
+    width: 50%;
+}
+.ywright {
+    width: 45%;
 }
 
 #yw-title {
@@ -181,13 +216,7 @@
     color: var(--white);
 }
 
-.ywleft {
-    width: 50%;
-}
-.ywright {
-    width: 45%;
-}
-
+    /* yw-desc */
 #yw-desc {
     display: flex;
     justify-content: space-between;
@@ -221,7 +250,7 @@
     background-color: var(--white);
 }
 
-
+    /* yw-lists */
 #yw-lists > ul {
     opacity: 0;
     position: absolute;
@@ -240,11 +269,8 @@
     transform: translateX(0);
 }
 
-
+/* #yw-imgs */
 #yw-imgs > div {
-    /* position: relative; */
-    /* position: absolute;
-    bottom: 0; */
     opacity: 0;
     transition: 0.5s;
 }
@@ -266,7 +292,6 @@
 #yw-imgs > div.on #dock {
     bottom: -1.5rem;
 }
-
 
 #phone1 {
     width: 28%;

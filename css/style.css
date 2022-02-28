@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+/* animation */
 @keyframes BtnHoverEffect {
     0% {
         transform: scale(0);
@@ -24,28 +25,14 @@
     }
 }
 
-@keyframes toRight {
-    0% {
-        right: 0;
-    }
-    100% {
-        right: -445%;
-    }
-}
 
-@keyframes toLeft {
-    0% {
-        left: 0;
-    }
-    100% {
-        left: -300%;
-    }
-}
-
+/* reset */
 * { margin: 0; padding: 0; box-sizing: border-box;}
 li { list-style: none; }
 input, select { outline: none; border: none; font-family: inherit; background-color: transparent; }
 
+
+/* 변수 정의 */
 :root {
     --font-size-small: 1.1rem;
     --font-size-medium: 1.5rem;
@@ -56,19 +43,23 @@ input, select { outline: none; border: none; font-family: inherit; background-co
     --black-bg: #181818;
     --white: #fff;
     --point-green: #00c389;
-    --gray-btn: #eaeaea;
     --detail-bg: rgb(230, 230, 230);
+    --gray-btn: #eaeaea;
     --gray-bg: #f5f5f5;
     --gray-hover: #4f4f4f;
     --gray-bg-dark: #e6e6e6;
     --footer-bg: #2a2a2a;
 }
 
+
+/* #wrap */
 #wrap {
     font-size: 14px;
     font-family: 'Work Sans', sans-serif;
 }
 
+
+/* scrollbar 스타일 정의 */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -82,16 +73,20 @@ input, select { outline: none; border: none; font-family: inherit; background-co
 }
 
 
+/* 공통 class 스타일 정의 */
+    /* .inner */
 .inner {
     width: calc(100vw - var(--header-width) - 8px);
     float: right;
 }
+    /* .inner-container */
 .inner-container {
     width: 80%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+    /* .hover-green */
 .hover-green {
     position: relative;
     cursor: pointer;
@@ -108,6 +103,7 @@ input, select { outline: none; border: none; font-family: inherit; background-co
     transform: scaleX(100%);
 }
 
+    /* .circle-btn */
 .circle-btn {
     display: inline-block;
     width: 70px;
@@ -141,19 +137,22 @@ input, select { outline: none; border: none; font-family: inherit; background-co
     animation: BtnHoverEffect 0.5s forwards;
 }
 
+    /* .gray-btn */
 .gray-btn {
     background-color: var(--gray-btn);
 }
+    /* .green-btn */
 .green-btn {
     background-color: var(--point-green);
     color: var(--white);
 }
 
-
+    /* .title */
 .title {
     font-size: var(--font-size-larger);
 }
 
+    /* .line */
 .line {
     display: inline-block;
     width: 4rem;
@@ -175,15 +174,17 @@ input, select { outline: none; border: none; font-family: inherit; background-co
     animation: wid0to100 0.8s forwards;
 }
 
+    /* .green-color */
 .green-color {
     color: var(--point-green);
 }
+    /* .gray-color */
 .gray-color {
     color: #939393;
     margin-bottom: 1.5rem;
 }
 
-
+    /* .btn-hover */
 .btn-hover {
     overflow: hidden;
     cursor: pointer;
@@ -221,8 +222,28 @@ input, select { outline: none; border: none; font-family: inherit; background-co
     right: 0;
 }
 
+    /* .sectionTitle */
 .sectionTitle {
     display: flex;
     align-items: center;
     margin-bottom: 5rem;
+}
+
+    /* .hover-green-2 */
+.hover-green-2 {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+}
+.hover-green-2::after {
+    margin-top: 3px;
+    display: block;
+    content: "";
+    height: 2px;
+    background-color: var(--point-green);
+    transition: 0.3s;
+    transform: scaleX(100%);
+}
+.hover-green-2:hover:after {
+    transform: scaleX(60%);
 }
