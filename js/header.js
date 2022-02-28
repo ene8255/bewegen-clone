@@ -30,6 +30,28 @@ document.addEventListener('scroll', () => {
 })
 
 
+// h-bottom
+const hbLis = document.querySelectorAll('#h-bottom li');
+const experts = document.querySelector('#experts');
+const blog = document.querySelector('#blog');
+
+document.addEventListener('scroll', () => {
+    const sct = document.documentElement.scrollTop;
+    const ostExperts = experts.offsetTop;
+    const ostBlog = blog.offsetTop;
+
+    hbLis.forEach(li => li.classList.remove('on'));
+
+    if(sct >= ostBlog) {
+        hbLis[2].classList.add('on');
+    }else if(sct >= ostExperts) {
+        hbLis[1].classList.add('on');
+    }else if(sct > 99) {
+        hbLis[0].classList.add('on');
+    }
+})
+
+
 // 토글 메뉴
 const nav = document.querySelector('nav');
 const toggleBtn = document.querySelector('#toggle');

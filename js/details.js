@@ -29,7 +29,7 @@ function mainWheelEvent(event) {
             navBtns[0].classList.add('disabled');
         }else if(currentOne === 7) {
             navBtns[1].classList.add('disabled');
-            body.style.overflowY = 'auto';
+            body.style.overflow = 'auto';
         }else {
             navBtns.forEach(btn => btn.classList.remove('disabled'));
         }
@@ -45,7 +45,7 @@ document.addEventListener('scroll', () => {
     if(sct >= ostMD && sct <= ostMD + 50) {
         mainID.classList.add('zoom');
         mainDetail.classList.add('fixed');
-        body.style.overflowY = 'hidden';
+        body.style.overflow = 'hidden';
 
         // 마우스휠 이벤트 추가
         mainDetail.addEventListener('wheel', mainWheelEvent);
@@ -65,7 +65,7 @@ document.addEventListener('scroll', () => {
         mainDetail.removeEventListener('wheel', mainWheelEvent);
 
     }else {
-        body.style.overflowY = 'auto';
+        body.style.overflow = 'auto';
 
         // 마우스휠 이벤트 제거
         mainDetail.removeEventListener('wheel', mainWheelEvent);
@@ -138,7 +138,7 @@ tOneNav.addEventListener('click', (e) => {
 
     }else if(currentOne === 7) {
         navBtns[1].classList.add('disabled');
-        body.style.overflowY = 'auto';
+        body.style.overflow = 'auto';
 
     }else {
         navBtns.forEach(btn => btn.classList.remove('disabled'));
@@ -154,5 +154,5 @@ skipBtn.addEventListener('click', () => {
     const ostTrike = trike.offsetTop;
 
     window.scrollTo(0, ostTrike);
-    body.style.overflowY = 'auto';
+    body.style.overflow = 'auto';
 })
