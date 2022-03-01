@@ -37,6 +37,10 @@ function mainWheelEvent(event) {
 }
 
 // 스크롤 이벤트
+const trikeImg = document.querySelector('#trike-img');
+const phone1 = document.querySelector('#phone1');
+const phone2 = document.querySelector('#phone2');
+
 document.addEventListener('scroll', () => {
     const sct = document.documentElement.scrollTop;
     const ostMD = mainDetail.offsetTop;
@@ -69,6 +73,22 @@ document.addEventListener('scroll', () => {
 
         // 마우스휠 이벤트 제거
         mainDetail.removeEventListener('wheel', mainWheelEvent);
+    }
+
+
+    let varY = sct * 0.006;
+    let varY2 = sct * 0.001;
+
+    if(sct > sctBefore) {
+        trikeImg.style.transform = 
+        `translateY(${varY}%)`;
+        phone1.style.transform = `translateY(-${varY}px)`;
+        phone2.style.transform = `translateY(${varY}px)`;
+
+    }else {
+        trikeImg.style.transform = `translateY(-${varY2}%)`;
+        phone1.style.transform = `translateY(${varY}px)`;
+        phone2.style.transform = `translateY(-${varY}px)`;
     }
     sctBefore = sct;
 })
@@ -153,6 +173,6 @@ const trike = document.querySelector('#trike');
 skipBtn.addEventListener('click', () => {
     const ostTrike = trike.offsetTop;
 
-    window.scrollTo(0, ostTrike);
+    window.scrollTo({top: ostTrike, behavior: 'smooth'});
     body.style.overflow = 'auto';
 })

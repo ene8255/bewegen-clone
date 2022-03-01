@@ -147,6 +147,7 @@ header {
     top: 0;
     left: 0;
     opacity: 0;
+    transition: 0.5s;
 }
 #h-bottom ul li.on {
     opacity: 1;

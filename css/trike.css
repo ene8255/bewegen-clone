@@ -23,6 +23,9 @@
     margin-top: 10vh;
     padding: 5rem;
 }
+#trike-img {
+    transition: 0.5s;
+}
 #trike-title img {
     width: 100%;
 }
@@ -298,12 +301,14 @@
     position: absolute;
     bottom: -2rem;
     left: 10rem;
+    transition: 0.5s;
 }
 #phone2 {
     width: 28%;
     position: absolute;
     bottom: -1rem;
     left: 20rem;
+    transition: 0.5s;
 }
 #dock {
     width: 105%;
