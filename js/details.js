@@ -40,6 +40,9 @@ function mainWheelEvent(event) {
 const trikeImg = document.querySelector('#trike-img');
 const phone1 = document.querySelector('#phone1');
 const phone2 = document.querySelector('#phone2');
+const teamDesc = document.querySelector('#team-desc-box');
+const michelAuto = document.querySelector('#michel-auto');
+const bCarousel = document.querySelector('#b-carousel-container');
 
 document.addEventListener('scroll', () => {
     const sct = document.documentElement.scrollTop;
@@ -76,20 +79,26 @@ document.addEventListener('scroll', () => {
     }
 
 
-    let varY = sct * 0.006;
+    // 요소에 동적인 효과 추가
+    let varY = sct * 0.003;
     let varY2 = sct * 0.001;
 
     if(sct > sctBefore) {
-        trikeImg.style.transform = 
-        `translateY(${varY}%)`;
+        trikeImg.style.transform = `translateY(${varY}px)`;
         phone1.style.transform = `translateY(-${varY}px)`;
         phone2.style.transform = `translateY(${varY}px)`;
+        teamDesc.style.transform = `translateY(${varY}px)`;
+        michelAuto.style.transform = `translateY(${varY}px)`;
 
     }else {
-        trikeImg.style.transform = `translateY(-${varY2}%)`;
-        phone1.style.transform = `translateY(${varY}px)`;
-        phone2.style.transform = `translateY(-${varY}px)`;
+        trikeImg.style.transform = `translateY(-${varY2}px)`;
+        phone1.style.transform = `translateY(${varY2}px)`;
+        phone2.style.transform = `translateY(-${varY2}px)`;
+        teamDesc.style.transform = `translateY(-${varY2}px)`;
+        michelAuto.style.transform = `translateY(-${varY2}px)`;
+
     }
+
     sctBefore = sct;
 })
 

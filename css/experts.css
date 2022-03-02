@@ -49,6 +49,7 @@
     padding: 3.5rem;
     font-size: var(--font-size-medium);
     line-height: 2.5rem;
+    transition: 0.5s;
 }
 #team-desc-box p:nth-child(2) {
     font-size: 14px;
@@ -144,6 +145,7 @@
     position: absolute;
     bottom: 12rem;
     right: -50%;
+    transition: 0.5s;
 }
 #michel-auto img {
     width: 40%;
