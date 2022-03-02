@@ -43,6 +43,7 @@ const phone2 = document.querySelector('#phone2');
 const teamDesc = document.querySelector('#team-desc-box');
 const michelAuto = document.querySelector('#michel-auto');
 const bCarousel = document.querySelector('#b-carousel-container');
+const wCarousel = document.querySelector('#w-carousel-container');
 
 document.addEventListener('scroll', () => {
     const sct = document.documentElement.scrollTop;
@@ -89,6 +90,8 @@ document.addEventListener('scroll', () => {
         phone2.style.transform = `translateY(${varY}px)`;
         teamDesc.style.transform = `translateY(${varY}px)`;
         michelAuto.style.transform = `translateY(${varY}px)`;
+        bCarousel.style.animationDirection = 'normal';
+        wCarousel.style.animationDirection = 'normal';
 
     }else {
         trikeImg.style.transform = `translateY(-${varY2}px)`;
@@ -96,6 +99,8 @@ document.addEventListener('scroll', () => {
         phone2.style.transform = `translateY(-${varY2}px)`;
         teamDesc.style.transform = `translateY(-${varY2}px)`;
         michelAuto.style.transform = `translateY(-${varY2}px)`;
+        bCarousel.style.animationDirection = 'reverse';
+        wCarousel.style.animationDirection = 'reverse';
 
     }
 
